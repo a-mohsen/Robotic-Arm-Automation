@@ -31,3 +31,5 @@ Currently I'm still testing the feedback of the motors with the shield. Once I f
 
 Demo for the arm's movement and center determining: 
 https://j.gifs.com/2x47MJ.gif
+
+D-H parameters and arm's forward kinematics: https://www.iaescore.com/journals/index.php/IJRA/article/view/1001
