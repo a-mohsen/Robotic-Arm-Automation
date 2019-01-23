@@ -7,6 +7,7 @@ import copy
 import math
 from videocaptureasync import VideoCaptureAsync
 from maplinrobot import MaplinRobot
+from gpiozero import LED
 
 def midpoint(ptA, ptB):
 	return ((ptA[0] + ptB[0]) * 0.5, (ptA[1] + ptB[1]) * 0.5)
@@ -34,6 +35,7 @@ if __name__ == '__main__':
 
 	global contours, selected_contour
 	s = MaplinRobot()
+	magnet = LED(17)
 
 	selected_contour = []
 	laser_center = None
@@ -132,7 +134,7 @@ if __name__ == '__main__':
 						#Acordding to the current setup, the arm move about 20 degrees for each 0.1 second
 						arm_movement_time = 0.1 * abs(angle_degree) / 20
 						if angle_degree <= 5 and angle_degree >= -5:
-							print("found")
+							print("Center Reached !!")
 						else:
 							if angle_degree > 5:
 								s.MoveArm(arm_movement_time , cmd='base-anti-clockwise')
@@ -143,8 +145,9 @@ if __name__ == '__main__':
 
 						print("center = " + str(laser_center))
 						print("degree = " + str(angle_degree))
-				else:
-					s.MoveArm(0.05, cmd='base-clockwise')
+					else:
+						magnet.on()
+						#Move the arm to the drop area
 				
 		
 		#cv2.imshow('mask', aho)
