@@ -30,4 +30,4 @@ Currently I'm still testing the feedback of the motors with the shield. Once I f
 ![enter image description here](https://lh3.googleusercontent.com/GC3p60nHQhfIHNUj5Ith0vHgajUncHiXYhJ0igDdHhS58d3lBBFUKjmVh7iuzHq7oLP4bGCqdsLZ)
 
 Demo for the arm's movement and center determining: 
-![enter image description here](https://j.gifs.com/2x47MJ.gif)
+https://j.gifs.com/2x47MJ.gif
